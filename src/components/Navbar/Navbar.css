@@ -1,0 +1,50 @@
+.navbar {
+    border: 1px solid red;
+    max-width: 1280px;
+    background-color: #272727;
+    margin: auto;
+  }
+  
+  .navbar__menu {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+  }
+  
+  .navbar__list {
+    display: flex;
+    list-style: none;
+    padding: 24px 0;
+    margin: 0;
+  }
+  
+  .navbar__link {
+    padding: 0 20px 0;
+  }
+  
+  .navbar__link_title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.23;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 400px) {
+    .navbar__link_title {
+      font-size: 11px;
+      line-height: 1.45;
+    }
+  
+    .navbar__list {
+      padding: 24px 20px;
+    }
+  
+    .navbar__link {
+      padding: 0 14px 0;
+    }
+  }
