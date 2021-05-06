@@ -1,0 +1,84 @@
+.find-movie {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-family: inherit;
+    font-style: normal;
+    letter-spacing: -0.04em;
+    color: #2F2F2F;
+}
+
+.find-movie__form {
+    margin: 60px 70px 42px 70px;
+    background-color: #2F2F2F;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.find-movie__form:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+.find-movie__input {
+    background-color: #2F2F2F;
+    width: 800px;
+    margin: 14px 0 14px 22px;
+    border: none;
+    border-radius: 40px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.31;
+    color: #8B8B8B;
+    outline: none;
+}
+.find-movie__input:focus {
+    text-decoration: underline #727171;
+}
+
+.find-movie__submit-container {
+    width: 80px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.find-movie__submit-button {
+    border: none;
+    width: 34px;
+    height: 34px;
+    background-color: #4285F4;
+    margin: 6px;
+    border-radius: 48px;
+    align-items: center;
+    outline: none;
+}
+.find-movie__submit-button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.2s;
+}
+
+.find-movie__submit-pic {
+    position: relative;
+    top: 1px;
+    left: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    .find-movie__form {
+        margin: 80px 30px 42px 30px;
+    }
+    .find-movie__input {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .find-movie__form {
+        margin: 80px 14px 42px 14px;
+    }
+    .find-movie__input {
+        width: 200px;
+    }
+}
