@@ -22,3 +22,15 @@
     border-radius: 7px;
     cursor: pointer;
 }
+.next__button:hover {
+    border: 1px solid #FFFFFF;
+}
+.next__button:active {
+opacity: 0.3;
+}
+
+@media screen and (max-width: 400px) {
+    .next__button {
+        width: 240px;
+    }
+}

@@ -27,7 +27,7 @@ function MoviesCard() {
                     <img src={movieOne} alt="Фильм" className="movie-card__image" />
                     <button className="movie-card__like ">Сохранить</button>
                     <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк"/>
+                        <img src={like} className="movie-card__like-active" alt="Лайк" />
                     </button>
                     <div className="movie-card__description">
                         <p className="movie-card__name">33 слова о дизайне</p>
@@ -38,7 +38,7 @@ function MoviesCard() {
                     <img src={movieTwo} alt="Фильм" className="movie-card__image" />
                     <button className="movie-card__like movie-card__like_hiden">Сохранить</button>
                     <button className="movie-card__like-container">
-                        <img src={like} className="movie-card__like-active" alt="Лайк"/>
+                        <img src={like} className="movie-card__like-active" alt="Лайк" />
                     </button>
                     <div className="movie-card__description">
                         <p className="movie-card__name">Киноальманах «100 лет дизайна»</p>
@@ -49,7 +49,7 @@ function MoviesCard() {
                     <img src={movieThree} alt="Фильм" className="movie-card__image" />
                     <button className="movie-card__like">Сохранить</button>
                     <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк"/>
+                        <img src={like} className="movie-card__like-active" alt="Лайк" />
                     </button>
                     <div className="movie-card__description">
                         <p className="movie-card__name">В погоне за Бенкси</p>
@@ -60,7 +60,7 @@ function MoviesCard() {
                     <img src={movieFour} alt="Фильм" className="movie-card__image" />
                     <button className="movie-card__like">Сохранить</button>
                     <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк"/>
+                        <img src={like} className="movie-card__like-active" alt="Лайк" />
                     </button>
                     <div className="movie-card__description">
                         <p className="movie-card__name">Баския: Взрыв реальности</p>
@@ -71,7 +71,7 @@ function MoviesCard() {
                     <img src={movieFive} alt="Фильм" className="movie-card__image" />
                     <button className="movie-card__like">Сохранить</button>
                     <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк"/>
+                        <img src={like} className="movie-card__like-active" alt="Лайк" />
                     </button>
                     <div className="movie-card__description">
                         <p className="movie-card__name">Бег это свобода</p>
@@ -82,7 +82,7 @@ function MoviesCard() {
                     <img src={movieSix} alt="Фильм" className="movie-card__image" />
                     <button className="movie-card__like movie-card__like_hiden">Сохранить</button>
                     <button className="movie-card__like-container">
-                        <img src={like} className="movie-card__like-active" alt="Лайк"/>
+                        <img src={like} className="movie-card__like-active" alt="Лайк" />
                     </button>
                     <div className="movie-card__description">
                         <p className="movie-card__name">Книготорговцы</p>
@@ -93,7 +93,7 @@ function MoviesCard() {
                     <img src={movieSeven} alt="Фильм" className="movie-card__image" />
                     <button className="movie-card__like">Сохранить</button>
                     <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк"/>
+                        <img src={like} className="movie-card__like-active" alt="Лайк" />
                     </button>
                     <div className="movie-card__description">
                         <p className="movie-card__name">Когда я думаю о Германии ночью</p>
@@ -104,7 +104,7 @@ function MoviesCard() {
                     <img src={movieEight} alt="Фильм" className="movie-card__image" />
                     <button className="movie-card__like">Сохранить</button>
                     <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк"/>
+                        <img src={like} className="movie-card__like-active" alt="Лайк" />
                     </button>
                     <div className="movie-card__description">
                         <p className="movie-card__name">Gimme Danger: История Игги и The Stooges</p>
@@ -115,7 +115,7 @@ function MoviesCard() {
                     <img src={movieNine} alt="Фильм" className="movie-card__image" />
                     <button className="movie-card__like">Сохранить</button>
                     <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк"/>
+                        <img src={like} className="movie-card__like-active" alt="Лайк" />
                     </button>
                     <div className="movie-card__description">
                         <p className="movie-card__name">Дженис: Маленькая девочка грустит</p>
@@ -126,7 +126,7 @@ function MoviesCard() {
                     <img src={movieTen} alt="Фильм" className="movie-card__image" />
                     <button className="movie-card__like">Сохранить</button>
                     <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк"/>
+                        <img src={like} className="movie-card__like-active" alt="Лайк" />
                     </button>
                     <div className="movie-card__description">
                         <p className="movie-card__name">Соберись перед прыжком</p>
@@ -137,7 +137,7 @@ function MoviesCard() {
                     <img src={movieEleven} alt="Фильм" className="movie-card__image" />
                     <button className="movie-card__like">Сохранить</button>
                     <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк"/>
+                        <img src={like} className="movie-card__like-active" alt="Лайк" />
                     </button>
                     <div className="movie-card__description">
                         <p className="movie-card__name">Пи Джей Харви: A dog called money</p>
@@ -148,7 +148,7 @@ function MoviesCard() {
                     <img src={movieTvelve} alt="Фильм" className="movie-card__image" />
                     <button className="movie-card__like">Сохранить</button>
                     <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк"/>
+                        <img src={like} className="movie-card__like-active" alt="Лайк" />
                     </button>
                     <div className="movie-card__description">
                         <p className="movie-card__name">По волнам: Искусство звука в кино</p>

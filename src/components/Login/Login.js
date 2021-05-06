@@ -19,8 +19,8 @@ function Login() {
                 <button type="submit" className="login__button">Войти</button>
             </form>
             <div className="switcher">
-                    <p className="switcher__text">Ещё не зарегистрированы?</p>
-                    <Link to="/signup" className="switcher__link">Регистрация</Link>
+                <p className="switcher__text">Ещё не зарегистрированы?</p>
+                <Link to="/signup" className="switcher__link">Регистрация</Link>
             </div>
             <Link to="/" className="back-to-main">На главную</Link>
         </section>

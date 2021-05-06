@@ -1,6 +1,6 @@
 import React from 'react';
 import './AboutMe.css';
-import myPhoto from '../../images/myPhoto4.jpg';
+import myPhoto from '../../images/myPhoto.jpg';
 
 function AboutMe() {
 
@@ -21,10 +21,12 @@ function AboutMe() {
                     Веб-разработка привлекает огромным потенциалом для
                     воплощения новых интересных идей: дизайн и интерфейсы, мультимедиа и
                         интерактивность, логика и бэкенд. </p>
-                    <ul className="me__links">
-                        <li className="me__link">LinkedIn</li>
-                        <li className="me__link">Github</li>
-                    </ul>
+                    <nav className="me__links">
+                        <a href="https://www.linkedin.com/in/александр-пономаренко-772884207/" className="me__link"
+                            target="_blank" rel="noreferrer" >LinkedIn</a>
+                        <a href="https://github.com/santelar" className="me__link"
+                            target="_blank" rel="noreferrer" >Github</a>
+                    </nav>
                 </div>
             </div>
         </section>

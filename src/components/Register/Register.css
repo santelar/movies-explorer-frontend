@@ -47,19 +47,15 @@
     line-height: 1.23;
     color: #FFFFFF;
 }
-
 .register__input_error{
     color: #EE3465;
 }
-
 .register__input:hover {
     background-color: #202020;
 }
-
 .register__input:focus {
     background-color: #202020;
 }
-
 .register__input:active {
     background-color: #202020;
 }
@@ -86,12 +82,10 @@
     border: none;
     cursor: pointer;
 }
-
 .register__button:hover {
     opacity: 0.6;
     transition: 0.2s;
 }
-
 .register__button:focus {
     background-color: #1d427e;
 }
@@ -120,12 +114,10 @@
     text-decoration: none;
     cursor: pointer;
 }
-
 .switcher__link:hover {
     opacity: 0.6;
     transition: 0.2s;
 }
-
 .switcher__link:focus {
     border-bottom: 1px solid #4285F4;
 }
@@ -141,12 +133,10 @@
     text-decoration: none;
     cursor: pointer;
 }
-
 .back-to-main:hover {
     opacity: 0.6;
     transition: 0.2s;
 }
-
 .back-to-main:focus {
     border-bottom: 1px solid #4285F4;
 }

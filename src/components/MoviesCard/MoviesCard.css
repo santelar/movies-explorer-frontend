@@ -32,17 +32,15 @@
     cursor: pointer;
     display: none;
 }
-
 .movie-card__like:hover {
     display: block;
+}
+.movie-card__like_hiden {
+    visibility: hidden;
 }
 
 .movie-card__image:hover ~ .movie-card__like {
     display: block;
-}
-
-.movie-card__like_hiden {
-    visibility: hidden;
 }
 
 .movie-card__like-container {
@@ -55,16 +53,15 @@
     border-radius: 30px;
     border: none;
 }
+.movie-card__like-container_hiden {
+    visibility: hidden;
+}
 
 .movie-card__like-active {
     position: relative;
     top: -2px;
     left: 0;
     width: 9px;
-}
-
-.movie-card__like-container_hiden {
-    visibility: hidden;
 }
 
 .movie-card__delete {
@@ -77,7 +74,6 @@
     cursor: pointer;
     display: none;
 }
-
 .movie-card__delete:hover {
     display: block;
 }
@@ -114,4 +110,37 @@
     color: #8B8B8B;
     background-color: #2F2F2F;
     border-radius: 3px;
+}
+
+@media screen and (max-width: 1180px) {
+    .movie-card {
+        width: 339px;
+    }
+    .movie-card__image {
+        width: 339px;
+        height: 190px;
+    }
+    .movie-card__description {
+        padding: 25px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .movie-card {
+        width: 300px;
+    }
+    .movie-card__image {
+        width: 300px;
+        height: 168px;
+    }
+    .movie-card__description {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 0 0 0;
+    }
+    .movie-card__name {
+        width: 240px;
+        font-size: 12px;
+        line-height: 1.25;
+    }
 }

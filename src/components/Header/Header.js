@@ -3,16 +3,18 @@ import { Link, Switch, Route } from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import account from '../../images/account.svg';
 import './Header.css';
-
-/*
-                    <Link to="/profile" className="header__account">
-                        <img src={account} alt="Лого" className="header__account-pic" />
-                        <p className="header__account-text">Аккаунт</p>
-                    </Link>
-                    */
-
+import BurgerMenu from '../BurgerMenu/BurgerMenu';
 
 function Header() {
+
+    const [isBurgerOpen, setIsBurgerOpen] = React.useState(false);
+
+    function handleBurgerOpenClick() {
+        setIsBurgerOpen(true);
+    }
+    function handleBurgerCloseClick() {
+        setIsBurgerOpen(false);
+    }
 
     return (
         <Switch>
@@ -38,9 +40,11 @@ function Header() {
                         <img src={account} alt="Лого" className="header__account-pic" />
                         <p className="header__account-text">Аккаунт</p>
                     </Link>
-                    <button type="button" className="header__burger-container">
-                            <span className="header__burger-button" />
-                    </button>
+                    <span type="button" className={`header__burger-button ${isBurgerOpen && 'header__burger-button_hidden'}`} onClick={handleBurgerOpenClick} />
+                    <BurgerMenu
+                        isOpen={isBurgerOpen}
+                        onClose={handleBurgerCloseClick}
+                    />
                 </header>
             </Route>
         </Switch>

@@ -11,11 +11,14 @@ function Footer() {
                     <h2 className="footer__title">Учебный проект Яндекс.Практикум х BeatFilm.</h2>
                     <div className="footer__container">
                         <p className="footer__copyright">© 2021</p>
-                        <ul className="footer__links">
-                            <li className="footer__link">Яндекс.Практикум</li>
-                            <li className="footer__link">LinkedIn</li>
-                            <li className="footer__link">Github</li>
-                        </ul>
+                        <nav className="footer__links">
+                            <a href="https://praktikum.yandex.ru" className="footer__link"
+                                target="_blank" rel="noreferrer" >Яндекс.Практикум</a>
+                            <a href="https://www.linkedin.com/in/александр-пономаренко-772884207/" className="footer__link"
+                                target="_blank" rel="noreferrer" >LinkedIn</a>
+                            <a href="https://github.com/santelar" className="footer__link"
+                                target="_blank" rel="noreferrer" >Github</a>
+                        </nav>
                     </div>
                 </section>
             </Route>

@@ -1,5 +1,4 @@
 .techs {
-    border: 1px solid red;
     background-color: #272727;
     max-width: 1280px;
     margin: 0 auto;
@@ -12,7 +11,6 @@
 }
 
 .techs__title {
-    border: 1px solid red;
     margin: 100px 70px 89px 70px;
     height: 50px;
     font-weight: 400;
@@ -21,7 +19,6 @@
 }
 
 .techs__subtitle {
-    border: 1px solid greenyellow;
     margin: 0 70px 26px 70px;
     padding: 0;
     font-weight: 400;
@@ -31,7 +28,6 @@
 }
 
 .techs__description {
-    border: 1px solid blue;
     width: 460px;
     margin: 0 auto;
     padding: 0;
@@ -62,11 +58,9 @@
     background: #303030;
     border-radius: 10px;
 }
-
 .techs__item:last-of-type {
     margin-right: 0;
 }
-
 
 @media screen and (max-width: 768px) {
     .techs__title {

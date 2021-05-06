@@ -1,5 +1,4 @@
 .footer {
-    border: 1px solid red;
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
@@ -12,7 +11,6 @@
 }
 
 .footer__title {
-    border: 1px solid red;
     margin: 0 70px;
     padding: 20px 0;
     font-weight: 400;
@@ -24,14 +22,12 @@
 }
 
 .footer__container {
-    border: 1px solid greenyellow;
     margin: 0 70px;
     display: flex;
     justify-content: space-between;
 }
 
 .footer__copyright {
-    border: 1px solid blue;
     margin: 20px 0;
     padding: 0;
     font-weight: 400;
@@ -40,7 +36,6 @@
 }
 
 .footer__links {
-    border: 1px solid blue;
     display: flex;
     margin: 20px 0;
     padding: 0;
@@ -48,17 +43,16 @@
 }
 
 .footer__link {
-    border: 1px solid yellow;
     font-size: 13px;
     font-weight: 400;
     line-height: 1.23;
     margin-right: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
 }
-
 .footer__link:last-of-type {
     margin-right: 0;
 }
-
 .footer__link:hover {
     cursor: pointer;
     opacity: 0.6;

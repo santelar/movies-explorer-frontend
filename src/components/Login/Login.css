@@ -47,7 +47,6 @@
     line-height: 1.23;
     color: #FFFFFF;
 }
-
 .login__input_error{
     color: #EE3465;
 }
@@ -74,12 +73,10 @@
     border: none;
     cursor: pointer;
 }
-
 .login__button:hover {
     opacity: 0.6;
     transition: 0.2s;
 }
-
 .login__button:focus {
     background-color: #1d427e;
 }
@@ -108,12 +105,10 @@
     text-decoration: none;
     cursor: pointer;
 }
-
 .switcher__link:hover {
     opacity: 0.6;
     transition: 0.2s;
 }
-
 .switcher__link:focus {
     border-bottom: 1px solid #4285F4;
 }
@@ -129,12 +124,10 @@
     text-decoration: none;
     cursor: pointer;
 }
-
 .back-to-main:hover {
     opacity: 0.6;
     transition: 0.2s;
 }
-
 .back-to-main:focus {
     border-bottom: 1px solid #4285F4;
 }

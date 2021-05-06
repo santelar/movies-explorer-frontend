@@ -1,5 +1,4 @@
 .about {
-    border: 1px solid red;
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
@@ -10,7 +9,6 @@
 }
 
 .about__title {
-    border: 1px solid red;
     height: 50px;
     margin: 110px 70px 70px 70px;
     padding: 0;
@@ -21,17 +19,14 @@
 }
 
 .about__container {
-    border: 1px solid greenyellow;
     margin: 0 70px 110px 70px;
     display: flex;
 }
 
 .about__paragraph {
-    border: 1px solid blue;
     width: 550px;
     margin-right: 40px;
 }
-
 .about__paragraph:last-of-type {
     margin-right: 0;
 }
@@ -164,8 +159,4 @@
         font-size: 11px;
         line-height: 1.8;
     }
-}
-
-@media screen and (max-width: 440px) {
-
 }

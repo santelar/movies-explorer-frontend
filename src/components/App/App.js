@@ -1,7 +1,5 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-//import ProtectedRoute from './ProtectedRoute';
-//import CurrentUserContext from "../contexts/CurrentUserContext";
 
 import './App.css';
 
@@ -15,9 +13,6 @@ import PageNotFound from '../PageNotFound/PageNotFound';
 import Footer from '../Footer/Footer';
 
 function App() {
-
-
-
 
   return (
     <div className="page">
