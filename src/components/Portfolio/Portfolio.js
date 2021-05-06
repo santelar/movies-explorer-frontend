@@ -15,7 +15,7 @@ function Portfolio() {
                     <p className="portfolio__subtitle" >Адаптивный сайт</p>
                     <span className="portfolio__link">↗</span>
                 </a>
-                <a href="https://github.com/santelar/mesto-react" className="portfolio__button" target="_blank" rel="noreferrer" >
+                <a href="http://santelar.nomoredomains.icu/" className="portfolio__button" target="_blank" rel="noreferrer" >
                     <p className="portfolio__subtitle" >Одностраничное приложение</p>
                     <span className="portfolio__link">↗</span>
                 </a>
