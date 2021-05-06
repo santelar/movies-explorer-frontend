@@ -11,10 +11,10 @@ function Login() {
             <h2 className="login__title">Рады видеть!</h2>
             <form className="login__form">
                 <p className="login__input-name">E-mail</p>
-                <input autocomplete="off" type="text" className="login__input" />
+                <input autocomplete="off" type="text" className="login__input"  required />
                 <span className="error"></span>
                 <p className="login__input-name">Пароль</p>
-                <input autocomplete="off" type="password" minlength="2" maxlength="25" className="login__input" />
+                <input autocomplete="off" type="password" minlength="2" maxlength="25" className="login__input"  required />
                 <span className="error"></span>
                 <button type="submit" className="login__button">Войти</button>
             </form>

@@ -11,13 +11,13 @@ function Register() {
             <h2 className="register__title">Добро пожаловать!</h2>
             <form className="register__form" autocomplete="off">
                 <p className="register__input-name">Имя</p>
-                <input autocomplete="off" type="text" className="register__input " />
+                <input autocomplete="off" type="text" className="register__input" required />
                 <span className="error"></span>
                 <p className="register__input-name">E-mail</p>
-                <input autocomplete="off" type="text" className="register__input" />
+                <input autocomplete="off" type="text" className="register__input"  required />
                 <span className="error"></span>
                 <p className="register__input-name">Пароль</p>
-                <input autocomplete="off" type="password" className="register__input register__input_error" />
+                <input autocomplete="off" type="password" className="register__input register__input_error"  required />
                 <span className="error">Что-то пошло не так...</span>
                 <button type="submit" className="register__button">Зарегистрироваться</button>
             </form>

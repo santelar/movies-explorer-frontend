@@ -34,6 +34,7 @@
     margin: 0;
 }
 
+
 .login__input {
     background: #202020;
     border: none;
@@ -47,6 +48,11 @@
     line-height: 1.23;
     color: #FFFFFF;
 }
+.login__input:hover {
+    border-bottom: 1px solid #707070;
+}
+
+
 .login__input_error{
     color: #EE3465;
 }

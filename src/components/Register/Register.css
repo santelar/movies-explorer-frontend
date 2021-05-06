@@ -47,6 +47,10 @@
     line-height: 1.23;
     color: #FFFFFF;
 }
+.register__input:hover {
+    border-bottom: 1px solid #707070;
+}
+
 .register__input_error{
     color: #EE3465;
 }
