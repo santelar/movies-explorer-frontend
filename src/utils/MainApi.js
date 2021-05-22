@@ -149,7 +149,7 @@ export class ApiMain {
 }
 
 const apiMain = new ApiMain({
-   baseUrl: "http://localhost:3001",
+  baseUrl: "http://localhost:3001",
   //baseUrl: "https://api.a.ponomarenko.nomoredomains.club",
   headers: {
     "Content-Type": "application/json",
