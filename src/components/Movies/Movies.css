@@ -1,0 +1,15 @@
+.movies__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #A0A0A0;
+  padding: 10px;
+  padding: 20px;
+  min-height: 140px;
+}

@@ -1,40 +1,77 @@
 .movie-block {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: grid;
-  font-family: inherit;
-  font-style: normal;
-  letter-spacing: -0.04em;
-  color: #2F2F2F;
-  display: block;
+  background-color: #202020;
+  padding: 80px 70px 30px;
+  border-top: 1px solid #424242;
 }
 
-.movie-block__container {
-  max-width: 1140px;
-  margin: 70px auto 28px auto;
+.movie-block__template {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 60px;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
+.next {
+  background-color: #202020;
+  padding: 50px 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-@media screen and (max-width: 1180px) {
-  .movie-block__container {
-    max-width: 708px;
+.next__button {
+  background-color: #202020;
+  border: 1px solid #424242;
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  width: 320px;
+  height: 36px;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+.next__button:hover {
+  border: 1px solid #FFFFFF;
+}
+
+@media screen and (max-width: 999px) {
+  .movie-block {
+    padding: 70px 30px;
+    margin-top: 0;
+  }
+  .movie-block__template {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-row-gap: 45px;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 36px 30px;
   }
 }
 
-@media screen and (max-width: 740px) {
-  .movie-block__container {
-    max-width: 300px;
+@media screen and (max-width: 523px) {
+  .movie-block {
+    padding: 40px 30px;
+    margin-top: 0;
+  }
+  .movie-block__template {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 36px 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .movie-block {
+    padding: 40px 10px 30px;
+    margin-top: 0;
+  }
+  .movie-block__template {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-column-gap: 0;
-    grid-row-gap: 36px;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px;
   }
 }

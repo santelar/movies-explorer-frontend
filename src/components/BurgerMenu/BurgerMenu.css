@@ -57,7 +57,7 @@
     height: 1024px;
     width: 502px;
     align-items: center;
-    transition: right 280ms ease-in-out;    
+    transition: right .7s ease-in-out;
 }
 
 .burger-menu__item {
