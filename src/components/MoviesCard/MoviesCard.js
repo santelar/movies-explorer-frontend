@@ -25,7 +25,7 @@ function MoviesCard({ savedMovies, movie, onBookmarkClick, isSavedMovie }) {
   return (
     <li className="movie">
       <a href={trailer}>
-        <img src={image || defaultMovieImage} alt="Фото фильма" className="movie__image" />
+        <img src={image || defaultMovieImage} alt="Фото фильма" className="movie__image" target="_blank" rel="noreferrer" />
       </a>
       <div className="movie__text-container">
         <p className="movie__title">{nameRU}</p>
