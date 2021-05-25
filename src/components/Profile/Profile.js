@@ -67,7 +67,7 @@ function Profile({ isLogin, handleLogout, handleEditProfile }) {
             </input>
           </div>
           <p className='profile__form-error'>{formValidation.errors.name || formValidation.errors.email}</p>
-          <button className="profile__button" type="submit" disabled={currentUser && (name === currentUser.data.email && email === currentUser.data.email) || !formValidation.isValid}>Редактировать</button>
+          <button className="profile__button" type="submit" disabled={currentUser && (name === currentUser.data.name && email === currentUser.data.email) || !formValidation.isValid}>Редактировать</button>
           <button onClick={handleLogout} className="profile__link">
             Выйти из аккаунта
           </button>

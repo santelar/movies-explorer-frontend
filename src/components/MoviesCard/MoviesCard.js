@@ -1,11 +1,12 @@
 import React from "react";
 import "./MoviesCard.css";
+import { Route } from 'react-router-dom';
 import defaultMovieImage from '../../images/defaultMovieImage.jpg';
 
 function MoviesCard({ savedMovies, movie, onBookmarkClick, isSavedMovie }) {
   const { nameRU, duration, trailer, image } = movie;
 
-  let isSaved = isSavedMovie(movie);
+  const isSaved = isSavedMovie(movie);
 
   function durationFormat(duration) {
     const hh = Math.trunc(duration / 60);
@@ -32,12 +33,22 @@ function MoviesCard({ savedMovies, movie, onBookmarkClick, isSavedMovie }) {
         <span className="movie__duration">{durationFormat(duration)}</span>
       </div>
 
-      <button
-        className={`movie__save-button ${isSaved && 'movie__saved-icon'}`}
-        onClick={!isSaved ? handleBookmarkClick : handleDelete}
-      >
-        {!isSaved && 'Cохранить'}
-      </button>
+      <Route exact path="/movies">
+        <button
+          className={`movie__save-button ${isSaved && 'movie__saved-icon'}`}
+          onClick={handleBookmarkClick}
+        >
+          {!isSaved && 'Cохранить'}
+        </button>
+      </Route>
+
+      <Route exact path="/saved-movies">
+        <button
+          className="movie__remove-icon"
+          onClick={handleDelete}
+        ></button>
+      </Route>
+
     </li>
   );
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import "./FindMovie.css";
-import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 import finderSubmit from '../../images/find-movie__submit.svg';
 
 function FindMovie({ onSubmitSearch, onFilterShort, isLoading }) {
@@ -48,9 +47,18 @@ function FindMovie({ onSubmitSearch, onFilterShort, isLoading }) {
         </div>
       </form>
 
-      <FilterCheckbox
-        handleOnChangeFilter={handleOnChangeFilter}
-      />
+      <div className="filter-checkbox">
+        <input
+          type="checkbox"
+          name="toggle"
+          id="toggle-button"
+          className="filter-checkbox__input" onChange={handleOnChangeFilter}
+        />
+         <label htmlFor="filter-checkbox__input" className="filter-checkbox__text">
+          Короткометражки
+          </label>
+      </div>
+
     </section >
   );
 }

@@ -63,12 +63,6 @@
   visibility: hidden;
 }
 
-.movie__save-button:hover {
-  box-shadow: #3456F3 0 0 1px 1px;
-  transform: scale(1.1);
-  transition: transform .25s ease-in-out;
-}
-
 .movie:hover .movie__save-button {
   visibility: visible;
 }
@@ -80,10 +74,23 @@
   visibility: visible;
 }
 
-.movie:hover .movie__saved-icon {
+.movie__remove-icon {
   width: 30px;
   height: 30px;
-  background: #F4F4F4 url(../../images/remove-icon.png) no-repeat center;
+  background: #a5a5a5 url(../../images/remove-icon.png) no-repeat center;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  margin: 0;
+  border: none;
+  border-radius: 30px;
+  transition: transform .25s ease-in-out;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: none;
+}
+.movie:hover .movie__remove-icon {
+  display: block;
 }
 
 @media screen and (max-width: 768px) {

@@ -81,6 +81,61 @@
   margin: 0 0 20px;
 }
 
+.filter-checkbox {
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 70px auto;
+}
+
+.filter-checkbox__text {
+  margin: 0 0 0 12px;
+  padding: 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #FFFFFF;
+}
+
+.filter-checkbox__input {
+  position: relative;
+  min-width: 36px;
+  height: 20px;
+  margin: 0;
+  vertical-align: top;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 4px rgba(50, 50, 71, 0.08),
+    0px 4px 8px rgba(50, 50, 71, 0.06);
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+}
+.filter-checkbox__input::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #b5bab7;
+  border-radius: 50%;
+  transform: translateX(0);
+  transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+}
+.filter-checkbox__input:checked::after {
+  transform: translateX(calc(100% - 1px));
+  background-color: #FFFFFF;
+}
+.filter-checkbox__input:checked {
+  background-color: #3DDC84;
+}
+
 @media screen and (max-width: 768px) {
   .find-movie__form {
       margin: 80px 30px 42px 30px;

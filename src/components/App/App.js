@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
-import { Route, Switch, useHistory, useLocation } from "react-router-dom";
+import { Redirect, Route, Switch, useHistory, useLocation } from "react-router-dom";
 import { CurrentUserContext } from "../../context/CurrentUserContext";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import "./App.css";
@@ -23,7 +23,7 @@ import apiMain from "../../utils/MainApi";
 
 function App() {
   const history = useHistory();
-  let location = useLocation();
+  const location = useLocation();
 
   const [isLogin, setIsLoggedIn] = React.useState(false); // Залогинен? //
   const [currentUser, setCurrentUser] = React.useState({}); // Данные по юзеру (объект) //
@@ -247,7 +247,7 @@ function App() {
     setIsPopupOpen(false);
   }
 
- ///////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////
 
   React.useEffect(() => {
     const initial = JSON.parse(localStorage.getItem("initialMovies"));
@@ -372,16 +372,12 @@ function App() {
               <Main />
               <Footer />
             </Route>
-
-            <Route exact path="/signup">
-              <Register handleRegister={handleRegister} />
-            </Route>
-            <Route exact path="/signin">
-              <Login handleLogin={handleLogin} />
+            <Route exact path="/">
+              {isLogin ? <Redirect to="/" /> : <Redirect to="/sign-in" />}
             </Route>
 
             <ProtectedRoute
-              exact path="/movies"
+              path="/movies"
               component={Movies}
               isLogin={isLogin}
               savedMovies={false}
@@ -393,7 +389,6 @@ function App() {
               onBookmarkClick={onBookmarkClick}
             />
             <ProtectedRoute
-              exact
               path="/saved-movies"
               component={Movies}
               isLogin={isLogin}
@@ -406,13 +401,23 @@ function App() {
               isSavedMovie={isSavedMovie}
             />
             <ProtectedRoute
-              exact
               path="/profile"
               component={Profile}
               isLogin={isLogin}
               handleLogout={handleLogout}
               handleEditProfile={handleEditProfile}
             />
+
+            <Route exact path="/signup" >
+              {isLogin ? <Redirect to="/" /> :
+                <Register handleRegister={handleRegister}
+                />}
+            </Route>
+            <Route exact path="/signin" >
+              {isLogin ? <Redirect to="/" /> :
+                <Login handleLogin={handleLogin}
+                />}
+            </Route>
 
             <Route path="*">
               <NotFoundPage />
