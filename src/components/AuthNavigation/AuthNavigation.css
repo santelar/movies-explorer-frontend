@@ -1,0 +1,42 @@
+.header__auth{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__button {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  text-decoration: none;
+  text-align: center;
+}
+.header__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.2s;
+}
+.header__button:focus {
+  outline: none;
+}
+
+.header__button_register {
+  color: #FFFFFF;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.header__button_login {
+  height: 32px;
+  width: 76px;
+  background-color: #3DDC84;
+  align-items: center;
+  color: #000000;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

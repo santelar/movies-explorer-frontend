@@ -1,193 +1,56 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import './MoviesCard.css';
+import React from "react";
+import "./MoviesCard.css";
+import { Route } from 'react-router-dom';
+import defaultMovieImage from '../../images/defaultMovieImage.jpg';
 
-import movieOne from '../../images/movie1.png';
-import movieTwo from '../../images/movie2.png';
-import movieThree from '../../images/movie3.png';
-import movieFour from '../../images/movie4.png';
-import movieFive from '../../images/movie5.png';
-import movieSix from '../../images/movie6.png';
-import movieSeven from '../../images/movie7.png';
-import movieEight from '../../images/movie8.png';
-import movieNine from '../../images/movie9.png';
-import movieTen from '../../images/movie10.png';
-import movieEleven from '../../images/movie11.png';
-import movieTvelve from '../../images/movie12.png';
+function MoviesCard({ savedMovies, movie, onBookmarkClick, isSavedMovie }) {
+  const { nameRU, duration, trailer, image } = movie;
 
-import like from '../../images/likeImg.svg';
-import delButton from '../../images/delImg.svg';
+  const isSaved = isSavedMovie(movie);
 
-function MoviesCard() {
+  function durationFormat(duration) {
+    const hh = Math.trunc(duration / 60);
+    const mm = duration % 60;
+    return `${hh > 0 ? hh + "ч " : ""}${mm}м`;
+  }
 
-    return (
-        <Switch>
-            <Route path="/movies">
-                <figure className="movie-card">
-                    <img src={movieOne} alt="Фильм" className="movie-card__image" />
-                    <button className="movie-card__like ">Сохранить</button>
-                    <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк" />
-                    </button>
-                    <div className="movie-card__description">
-                        <p className="movie-card__name">33 слова о дизайне</p>
-                        <p className="movie-card__duration">1 ч 17 мин</p>
-                    </div>
-                </figure>
-                <figure className="movie-card">
-                    <img src={movieTwo} alt="Фильм" className="movie-card__image" />
-                    <button className="movie-card__like movie-card__like_hiden">Сохранить</button>
-                    <button className="movie-card__like-container">
-                        <img src={like} className="movie-card__like-active" alt="Лайк" />
-                    </button>
-                    <div className="movie-card__description">
-                        <p className="movie-card__name">Киноальманах «100 лет дизайна»</p>
-                        <p className="movie-card__duration">1 ч 17 мин</p>
-                    </div>
-                </figure>
-                <figure className="movie-card">
-                    <img src={movieThree} alt="Фильм" className="movie-card__image" />
-                    <button className="movie-card__like">Сохранить</button>
-                    <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк" />
-                    </button>
-                    <div className="movie-card__description">
-                        <p className="movie-card__name">В погоне за Бенкси</p>
-                        <p className="movie-card__duration">1 ч 17 мин</p>
-                    </div>
-                </figure>
-                <figure className="movie-card">
-                    <img src={movieFour} alt="Фильм" className="movie-card__image" />
-                    <button className="movie-card__like">Сохранить</button>
-                    <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк" />
-                    </button>
-                    <div className="movie-card__description">
-                        <p className="movie-card__name">Баския: Взрыв реальности</p>
-                        <p className="movie-card__duration">1 ч 17 мин</p>
-                    </div>
-                </figure>
-                <figure className="movie-card">
-                    <img src={movieFive} alt="Фильм" className="movie-card__image" />
-                    <button className="movie-card__like">Сохранить</button>
-                    <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк" />
-                    </button>
-                    <div className="movie-card__description">
-                        <p className="movie-card__name">Бег это свобода</p>
-                        <p className="movie-card__duration">1 ч 17 мин</p>
-                    </div>
-                </figure>
-                <figure className="movie-card">
-                    <img src={movieSix} alt="Фильм" className="movie-card__image" />
-                    <button className="movie-card__like movie-card__like_hiden">Сохранить</button>
-                    <button className="movie-card__like-container">
-                        <img src={like} className="movie-card__like-active" alt="Лайк" />
-                    </button>
-                    <div className="movie-card__description">
-                        <p className="movie-card__name">Книготорговцы</p>
-                        <p className="movie-card__duration">1 ч 17 мин</p>
-                    </div>
-                </figure>
-                <figure className="movie-card">
-                    <img src={movieSeven} alt="Фильм" className="movie-card__image" />
-                    <button className="movie-card__like">Сохранить</button>
-                    <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк" />
-                    </button>
-                    <div className="movie-card__description">
-                        <p className="movie-card__name">Когда я думаю о Германии ночью</p>
-                        <p className="movie-card__duration">1 ч 17 мин</p>
-                    </div>
-                </figure>
-                <figure className="movie-card">
-                    <img src={movieEight} alt="Фильм" className="movie-card__image" />
-                    <button className="movie-card__like">Сохранить</button>
-                    <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк" />
-                    </button>
-                    <div className="movie-card__description">
-                        <p className="movie-card__name">Gimme Danger: История Игги и The Stooges</p>
-                        <p className="movie-card__duration">1 ч 17 мин</p>
-                    </div>
-                </figure>
-                <figure className="movie-card">
-                    <img src={movieNine} alt="Фильм" className="movie-card__image" />
-                    <button className="movie-card__like">Сохранить</button>
-                    <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк" />
-                    </button>
-                    <div className="movie-card__description">
-                        <p className="movie-card__name">Дженис: Маленькая девочка грустит</p>
-                        <p className="movie-card__duration">1 ч 17 мин</p>
-                    </div>
-                </figure>
-                <figure className="movie-card">
-                    <img src={movieTen} alt="Фильм" className="movie-card__image" />
-                    <button className="movie-card__like">Сохранить</button>
-                    <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк" />
-                    </button>
-                    <div className="movie-card__description">
-                        <p className="movie-card__name">Соберись перед прыжком</p>
-                        <p className="movie-card__duration">1 ч 17 мин</p>
-                    </div>
-                </figure>
-                <figure className="movie-card">
-                    <img src={movieEleven} alt="Фильм" className="movie-card__image" />
-                    <button className="movie-card__like">Сохранить</button>
-                    <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк" />
-                    </button>
-                    <div className="movie-card__description">
-                        <p className="movie-card__name">Пи Джей Харви: A dog called money</p>
-                        <p className="movie-card__duration">1 ч 17 мин</p>
-                    </div>
-                </figure>
-                <figure className="movie-card">
-                    <img src={movieTvelve} alt="Фильм" className="movie-card__image" />
-                    <button className="movie-card__like">Сохранить</button>
-                    <button className="movie-card__like-container movie-card__like-container_hiden">
-                        <img src={like} className="movie-card__like-active" alt="Лайк" />
-                    </button>
-                    <div className="movie-card__description">
-                        <p className="movie-card__name">По волнам: Искусство звука в кино</p>
-                        <p className="movie-card__duration">1 ч 17 мин</p>
-                    </div>
-                </figure>
-            </Route>
-            <Route path="/saved-movies">
-                <figure className="movie-card">
-                    <img src={movieOne} alt="Фильм" className="movie-card__image" />
-                    <button className="movie-card__like  movie-card__like_hiden">Сохранить</button>
-                    <img src={delButton} type="button" className="movie-card__delete" alt="Сохранен"></img>
-                    <div className="movie-card__description">
-                        <p className="movie-card__name">33 слова о дизайне</p>
-                        <p className="movie-card__duration">1 ч 17 мин</p>
-                    </div>
-                </figure>
-                <figure className="movie-card">
-                    <img src={movieTwo} alt="Фильм" className="movie-card__image" />
-                    <button className="movie-card__like movie-card__like_hiden">Сохранить</button>
-                    <img src={delButton} type="button" className="movie-card__delete" alt="Сохранен"></img>
-                    <div className="movie-card__description">
-                        <p className="movie-card__name">Киноальманах «100 лет дизайна»</p>
-                        <p className="movie-card__duration">1 ч 17 мин</p>
-                    </div>
-                </figure>
-                <figure className="movie-card">
-                    <img src={movieThree} alt="Фильм" className="movie-card__image" />
-                    <button className="movie-card__like  movie-card__like_hiden">Сохранить</button>
-                    <img src={delButton} type="button" className="movie-card__delete" alt="Сохранен"></img>
-                    <div className="movie-card__description">
-                        <p className="movie-card__name">В погоне за Бенкси</p>
-                        <p className="movie-card__duration">1 ч 17 мин</p>
-                    </div>
-                </figure>
-            </Route>
-        </Switch>
+  function handleBookmarkClick(evt) {
+    evt.preventDefault();
+    onBookmarkClick(movie, !isSaved);
+  }
 
-    );
+  function handleDelete() {
+    onBookmarkClick(movie, false);
+  }
+
+  return (
+    <li className="movie">
+      <a href={trailer}>
+        <img src={image || defaultMovieImage} alt="Фото фильма" className="movie__image" target="_blank" rel="noreferrer" />
+      </a>
+      <div className="movie__text-container">
+        <p className="movie__title">{nameRU}</p>
+        <span className="movie__duration">{durationFormat(duration)}</span>
+      </div>
+
+      <Route exact path="/movies">
+        <button
+          className={`movie__save-button ${isSaved && 'movie__saved-icon'}`}
+          onClick={handleBookmarkClick}
+        >
+          {!isSaved && 'Cохранить'}
+        </button>
+      </Route>
+
+      <Route exact path="/saved-movies">
+        <button
+          className="movie__remove-icon"
+          onClick={handleDelete}
+        ></button>
+      </Route>
+
+    </li>
+  );
 }
 
 export default MoviesCard;

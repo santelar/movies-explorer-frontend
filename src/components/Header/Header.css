@@ -1,205 +1,57 @@
 .header {
-    background-color: #073042;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 18px 0 11px 0;
-    display: flex;
-    justify-content: space-between;
-    font-family: inherit;
-    font-style: normal;
-    position: relative;
+  background-color: #073042;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 70px;
+
+}
+.header_black {
+  background-color: #202020;
 }
 
-.header__logged {
-    background-color: #202020;
-    position: relative;
+.header__logo {
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 38px;
+}
+.header__logo:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.2s;
 }
 
-.header__navigation {
-    margin: 0 0 0 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo {
-    width: 38px;
-    height: 38px;
-}
-.logo:hover {
-    cursor: pointer;
-    opacity: 0.6;
-    transition: 0.2s;
-}
-
-.logo__logged {
-    margin-right: 44px;
-}
-
-.header__auth{
-    margin-right: 70px;
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-}
-
-.header__button {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.33;  
-    text-decoration: none;
-    text-align: center;
-}
-.header__button:hover {
-    cursor: pointer;
-    opacity: 0.6;
-    transition: 0.2s;
-}
-.header__button:focus {
-    outline: none;
-}
-
-.header__button_register {
-    color: #FFFFFF;
-    margin-right: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.header__button_login {
-    height: 32px;
-    width: 76px;
-    background-color: #3DDC84;
-    align-items: center;
-    color: #000000;
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.header__movies {
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 1.38;
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.header__movies:hover {
-    cursor: pointer;
-    opacity: 0.6;
-    transition: 0.2s;
-}
-
-.header__movies_saved {
-    margin-left: 16px;
-    font-weight: 400;
-}
-.header__movies_saved:active {
-    font-weight: 500;
-}
-
-.header__account {
-    position: absolute;
-    top: 21px;
-    right: 70px;
-    display: flex;
-    padding: 9px 12px;
-    border: 2px solid rgb(170, 170, 170, 0.2);
-    box-sizing: border-box;
-    border-radius: 50px;
-    text-decoration: none;
-}
-.header__account:hover {
-    cursor: pointer;
-    opacity: 0.6;
-    transition: 0.2s;
-}
-
-.header__account-pic {
-    width: 12px;
-    height: 14px;
-}
-
-.header__account-text {
-    margin: 0 0 0 7px;
-    padding: 0;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    color: #FFFFFF;
-}
-
-.header__burger-button {
-    display: none;
-    position: absolute;
-    top: 15px;
-    right: 30px;
-    width: 44px;
-    height: 44px;
-    background-color: #202020;
-    color: #FFFFFF;
-    background-image: url(../../images/header__burger.svg);
-    cursor: pointer;
-    box-sizing: border-box;
-    overflow: hidden;
-    border: none;
-    outline: none;
-}
-
-@media screen and (max-width: 768px) {
-    .header {
-        padding: 15px 0;
-        display: flex;
-    }
-    .header__navigation {
-        margin: 3px 0 3px 70px;
-    }
-    .header__auth{
-        margin-right: 30px;
-    }
-    .logo__logged {
-        margin-right: 0;
-    }
-    .header__movies {
-        display: none;
-    }
-    .header__account {
-        display: none;   
-    }
-    .header__burger-button {
-        display: block;
-    }
-    .header__burger-button_hidden {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .header__navigation {
-        margin-left: 14px;
-    }
-    .header__auth{
-        margin-right: 14px;
-        padding: 0;
-    }
-    .header__button {
-        font-size: 10px;
-        line-height: 1.6;
-    }
-    .header__button_register {
-        margin-right: 14px;
-    }
-    .header__button_login {
-        height: 26px;
-        width: 54px;
-    }
-    .header__burger-button {
-      right: 14px;
-      width: 40px;
-      height: 43px;
-    }
+@media screen and (max-width: 523px) {
+  .header {
+    padding: 18px 14px;
+  }
+  .header__signup {
+    margin-right: 14px;
+  }
+  .header__auth-container {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .header__movie-container {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .header__button {
+    width: 54px;
+    height: 26px;
+  }
+  .header__signup {
+    margin-right: 14px;
+  }
+  .menu__box {
+    width: 100%;
+    padding: 144px 10px 48px;
+  }
+  .menu__btn {
+    top: 13px;
+    right: 13px;
+  }
 }
